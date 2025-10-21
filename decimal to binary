@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+    
+    int index=0;
+    int result[32];
+    while(N>0)
+    {
+        result[index]=N%2;
+        N=N/2;
+        index++;
+    }
+    for(int i=index-1; i>=0; i--)
+    {
+        printf("%d",result[i]);
+    }
+}
