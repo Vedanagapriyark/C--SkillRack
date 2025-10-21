@@ -1,0 +1,24 @@
+Print 1stnumber lastnumber 2ndnumber (last-1)number:
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int num,arr[num];
+scanf("%d", &num);
+for (int i=0; i<7; i++)
+{
+    scanf("%d ",arr[i]);
+}
+int leftIndex=0, rightIndex=num-1;
+while(leftIndex<rightIndex)
+{
+    printf("%d %d", arr[leftIndex], arr[rightIndex]);
+    leftIndex++;
+    rightIndex--;
+}
+if(num%2!=0)
+{
+    printf("%d ",arr[leftIndex]);
+}
+}
