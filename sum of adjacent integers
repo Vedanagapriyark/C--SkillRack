@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    int arr[num];
+    for (int i = 0; i < num; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int result[num];
+    for (int i = 0; i < num; i++) {
+        if (i == 0)
+            result[i] = arr[i + 1];
+        else if (i == num - 1)
+            result[i] = arr[i - 1];
+        else
+            result[i] = arr[i - 1] + arr[i + 1];
+    }
+
+    for (int i = 0; i < num; i++) {
+        printf("%d ", result[i]);
+    }
+
+    return 0;
+}
